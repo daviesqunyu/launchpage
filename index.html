@@ -15,19 +15,22 @@
             justify-content: center;
             align-items: center;
             background-color: #f9f9f9;
+            width: 100%; /* Ensure full width */
         }
 
         /* The container to hold all content, center it */
         .container {
             width: 100%;
             height: 100%;
+            max-width: 1200px; /* Prevents it from stretching too much on larger screens */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            overflow: auto;
             padding: 0 20px;
+            box-sizing: border-box;
+            overflow: hidden;
         }
 
         .avatar {
@@ -89,7 +92,7 @@
 
         .details {
             width: 100%;
-            margin-top: 30px;
+            margin-top: 10px;
         }
 
         .detail {
@@ -126,10 +129,10 @@
             margin: 10px 0;
         }
 
-        /* Media Queries for Mobile */
-        @media (max-width: 768px) {
+        /* Media Queries for Tablet and Mobile */
+        @media (max-width: 1024px) {
             .container {
-                padding: 0 10px;
+                padding: 0 15px;
             }
 
             .avatar {
@@ -138,8 +141,8 @@
             }
 
             .avatar svg {
-                width: 60px;
-                height: 60px;
+                width: 70px;
+                height: 70px;
             }
 
             h2 {
@@ -147,7 +150,7 @@
             }
 
             .amount h1 {
-                font-size: 26px;
+                font-size: 28px;
             }
 
             .detail {
@@ -160,7 +163,7 @@
             }
         }
 
-        /* Small screens */
+        /* Small screens like Phones */
         @media (max-width: 480px) {
             h2 {
                 font-size: 18px;
