@@ -1,101 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transaction Details</title>
+    <title>Transaction Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
-            padding: 20px;
             background-color: #f9f9f9;
-        }
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        .profile-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto;
-            border-radius: 50%;
-            background-color: #ddd;
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 40px;
-            color: #aaa;
-            margin-bottom: 20px;
-        }
-        h2 {
-            margin: 10px 0;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        h1 {
-            margin: 10px 0;
-            font-size: 24px;
+            align-items: center;
+            height: 100vh;
             color: #333;
         }
-        p {
+
+        .container {
+            background-color: #ffffff;
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            background-color: #eee;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            position: relative;
+        }
+
+        .avatar svg {
+            width: 50px;
+            height: 50px;
+            fill: #555;
+        }
+
+        /* Simple user profile inside the circle */
+        .avatar .head {
+            position: absolute;
+            top: 12px;
+            width: 20px;
+            height: 20px;
+            background-color: #555;
+            border-radius: 50%;
+        }
+
+        .avatar .body {
+            position: absolute;
+            top: 35px;
+            width: 30px;
+            height: 20px;
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            font-size: 18px;
             margin: 10px 0;
-            color: #777;
+            color: #222;
+            font-weight: bold; /* Only make the name bold */
         }
-        .status {
-            display: inline-block;
-            background-color: #2ca64a;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-weight: bold;
-            margin: 20px 0;
+
+        .amount h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #111;
+            font-weight: normal; /* Make the amount text normal (non-bold) */
         }
+
+        .amount p {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+
         .details {
-            text-align: left;
             margin-top: 20px;
+            text-align: left;
+        }
+
+        .detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .detail span {
             font-size: 14px;
             color: #333;
         }
-        .details div {
-            padding: 5px 0;
-            display: flex;
-            justify-content: space-between;
+
+        .value {
+            font-weight: normal; /* Ensure the rest are not bold */
+            color: #222;
         }
-        .conversion, .email {
-            font-size: 0.9em;
-            color: #666;
+
+        .status-button {
+            border: 1px solid #4caf50;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #4caf50;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px;
         }
-        small {
-            color: #999;
-            display: block;
-            font-size: 0.75em;
+
+        .status-button .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #4caf50;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .separator {
+            border-top: 1px solid #ddd;
+            margin: 10px 0;
         }
     </style>
 </head>
+
 <body>
+    <div class="container">
+        <div class="avatar">
+            <!-- Simple head and body representation inside the circle -->
+            <div class="head"></div> <!-- Head -->
+            <div class="body"></div> <!-- Body -->
+        </div>
 
-<div class="container">
-    <div class="profile-icon">👤</div>
-    <h2>KIMULI EMMANUEL</h2>
-    <h1>7,380,000.18 UGX</h1>
-    <p>MAY 14, 2024 7:11 AM</p>
-    <div class="status">Processed</div>
-    <div class="details">
-        <div><span>Status:</span> <span>Processed</span></div>
-        <div><span>Transaction ID:</span> <span>4506213002</span></div>
-        <div><span>Amount received:</span> <span>7,380,000.18 UGX</span></div>
-        <div><span>Fee:</span> <span>1,000.00 UGX</span></div>
-        <div><span>Total:</span> <span>7,380,000.18 UGX</span></div>
-        <div class="conversion"><span>Conversion:</span> <span>1 BTC = 235,288,338 UGX<br><small>(Includes 31.03% exchange fee)</small></span></div>
-        <div class="email"><span>Email:</span> <span>e*********@gmail.com</span></div>
+        <div class="profile">
+            <h2>KIMULI EMMANUEL</h2>
+        </div>
+
+        <div class="amount">
+            <h1>7,380,000.18 UGX</h1>
+            <p>MAY 14, 2024 7:11 AM</p>
+        </div>
+
+        <div class="details">
+            <div class="detail">
+                <span>Status</span>
+                <span class="status-button"><span class="dot"></span>Processed</span>
+            </div>
+            <div class="detail">
+                <span>Transaction ID</span>
+                <span class="value">4506213002</span>
+            </div>
+            <div class="separator"></div>
+            <div class="detail">
+                <span>Amount received</span>
+                <span class="value">7,380,000.18 UGX</span>
+            </div>
+            <div class="detail">
+                <span>Fee</span>
+                <span class="value">1,000.00 UGX</span>
+            </div>
+            <div class="separator"></div>
+            <div class="detail">
+                <span>Total</span>
+                <span class="value">7,380,000.18 UGX</span>
+            </div>
+            <div class="detail">
+                <span>Conversion</span>
+                <span class="value">1 BTC = 335,639,391.06 UGX</span>
+            </div>
+            <!-- Moved the exchange fee text below Conversion -->
+            <div class="detail">
+                <span></span>
+                <span class="value">(Includes 31.03% exchange fee)</span>
+            </div>
+            <div class="detail">
+                <span>Email</span>
+                <span class="value">e************@gmail.com</span>
+            </div>
+        </div>
     </div>
-</div>
-
 </body>
+
 </html>
