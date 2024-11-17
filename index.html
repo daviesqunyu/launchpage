@@ -6,50 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaction Page</title>
     <style>
-        /* Reset body margin and padding for full-page layout */
-        body {
-            font-family: Arial, sans-serif;
+        /* Ensure full screen, no borders, no margins */
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            color: #333;
-            flex-direction: column;
-            overflow: hidden;
+            background-color: #f9f9f9;
         }
 
+        /* The container to hold all content, center it */
         .container {
-            background-color: #ffffff;
             width: 100%;
-            max-width: 600px;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            overflow: auto; /* Ensure content is scrollable if needed */
-            margin: 0 auto;
+            overflow: auto;
+            padding: 0 20px;
         }
 
         .avatar {
-            width: 100px;
-            height: 100px;
-            margin: auto;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
             background-color: #eee;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 20px;
-            border: 2px solid #ddd;
             position: relative;
         }
 
         .avatar svg {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             fill: #555;
         }
 
@@ -73,28 +68,28 @@
         }
 
         h2 {
-            font-size: 20px;
-            margin: 15px 0;
+            font-size: 24px;
             color: #222;
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
         .amount h1 {
-            font-size: 28px;
+            font-size: 32px;
             margin: 0;
             color: #111;
             font-weight: normal;
         }
 
         .amount p {
-            font-size: 14px;
+            font-size: 16px;
             color: #666;
             margin-top: 5px;
         }
 
         .details {
-            margin-top: 20px;
-            text-align: left;
+            width: 100%;
+            margin-top: 30px;
         }
 
         .detail {
@@ -102,16 +97,8 @@
             justify-content: space-between;
             align-items: center;
             margin: 15px 0;
-        }
-
-        .detail span {
             font-size: 16px;
             color: #333;
-        }
-
-        .value {
-            font-weight: normal;
-            color: #222;
         }
 
         .status-button {
@@ -142,30 +129,28 @@
         /* Media Queries for Mobile */
         @media (max-width: 768px) {
             .container {
-                width: 90%;
-                padding: 20px;
+                padding: 0 10px;
             }
 
             .avatar {
-                width: 80px;
-                height: 80px;
+                width: 100px;
+                height: 100px;
             }
 
             .avatar svg {
-                width: 50px;
-                height: 50px;
+                width: 60px;
+                height: 60px;
             }
 
-            .amount h1 {
+            h2 {
                 font-size: 22px;
             }
 
-            .details .detail {
-                margin: 10px 0;
+            .amount h1 {
+                font-size: 26px;
             }
 
-            .detail span,
-            .value {
+            .detail {
                 font-size: 14px;
             }
 
@@ -175,18 +160,17 @@
             }
         }
 
-        /* Media Query for Small Screens */
+        /* Small screens */
         @media (max-width: 480px) {
             h2 {
                 font-size: 18px;
             }
 
             .amount h1 {
-                font-size: 20px;
+                font-size: 22px;
             }
 
-            .detail span,
-            .value {
+            .detail {
                 font-size: 12px;
             }
 
@@ -222,34 +206,33 @@
             </div>
             <div class="detail">
                 <span>Transaction ID</span>
-                <span class="value">4506213002</span>
+                <span>4506213002</span>
             </div>
             <div class="separator"></div>
             <div class="detail">
                 <span>Amount received</span>
-                <span class="value">7,380,000.18 UGX</span>
+                <span>7,380,000.18 UGX</span>
             </div>
             <div class="detail">
                 <span>Fee</span>
-                <span class="value">1,000.00 UGX</span>
+                <span>1,000.00 UGX</span>
             </div>
             <div class="separator"></div>
             <div class="detail">
                 <span>Total</span>
-                <span class="value">7,380,000.18 UGX</span>
+                <span>7,380,000.18 UGX</span>
             </div>
             <div class="detail">
                 <span>Conversion</span>
-                <span class="value">1 BTC = 335,639,391.06 UGX</span>
+                <span>1 BTC = 335,639,391.06 UGX</span>
             </div>
-            <!-- Moved the exchange fee text below Conversion -->
             <div class="detail">
                 <span></span>
-                <span class="value">(Includes 31.03% exchange fee)</span>
+                <span>(Includes 31.03% exchange fee)</span>
             </div>
             <div class="detail">
                 <span>Email</span>
-                <span class="value">e************@gmail.com</span>
+                <span>e************@gmail.com</span>
             </div>
         </div>
     </div>
