@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaction Page</title>
     <style>
+        /* Reset body margin and padding for full-page layout */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
+            padding: 0;
             background-color: #f9f9f9;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             color: #333;
-            padding: 10px;
+            flex-direction: column;
+            overflow: hidden;
         }
 
         .container {
             background-color: #ffffff;
-            width: 600px;
+            width: 100%;
+            max-width: 600px;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            max-width: 100%;
+            overflow: auto; /* Ensure content is scrollable if needed */
+            margin: 0 auto;
         }
 
         .avatar {
