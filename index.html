@@ -15,20 +15,22 @@
             align-items: center;
             height: 100vh;
             color: #333;
+            padding: 10px;
         }
 
         .container {
             background-color: #ffffff;
-            width: 400px;
-            padding: 20px;
+            width: 600px;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            max-width: 100%;
         }
 
         .avatar {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             margin: auto;
             background-color: #eee;
             border-radius: 50%;
@@ -41,8 +43,8 @@
         }
 
         .avatar svg {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             fill: #555;
         }
 
@@ -50,37 +52,37 @@
         .avatar .head {
             position: absolute;
             top: 12px;
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
             background-color: #555;
             border-radius: 50%;
         }
 
         .avatar .body {
             position: absolute;
-            top: 35px;
-            width: 30px;
-            height: 20px;
+            top: 40px;
+            width: 40px;
+            height: 30px;
             background-color: #555;
             border-radius: 5px;
         }
 
         h2 {
-            font-size: 18px;
-            margin: 10px 0;
+            font-size: 20px;
+            margin: 15px 0;
             color: #222;
-            font-weight: bold; /* Only make the name bold */
+            font-weight: bold;
         }
 
         .amount h1 {
-            font-size: 24px;
+            font-size: 28px;
             margin: 0;
             color: #111;
-            font-weight: normal; /* Make the amount text normal (non-bold) */
+            font-weight: normal;
         }
 
         .amount p {
-            font-size: 12px;
+            font-size: 14px;
             color: #666;
             margin-top: 5px;
         }
@@ -98,21 +100,21 @@
         }
 
         .detail span {
-            font-size: 14px;
+            font-size: 16px;
             color: #333;
         }
 
         .value {
-            font-weight: normal; /* Ensure the rest are not bold */
+            font-weight: normal;
             color: #222;
         }
 
         .status-button {
             border: 1px solid #4caf50;
-            padding: 5px 10px;
+            padding: 6px 12px;
             border-radius: 5px;
             color: #4caf50;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
             display: inline-block;
             margin-left: 10px;
@@ -130,6 +132,63 @@
         .separator {
             border-top: 1px solid #ddd;
             margin: 10px 0;
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .avatar {
+                width: 80px;
+                height: 80px;
+            }
+
+            .avatar svg {
+                width: 50px;
+                height: 50px;
+            }
+
+            .amount h1 {
+                font-size: 22px;
+            }
+
+            .details .detail {
+                margin: 10px 0;
+            }
+
+            .detail span,
+            .value {
+                font-size: 14px;
+            }
+
+            .status-button {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 18px;
+            }
+
+            .amount h1 {
+                font-size: 20px;
+            }
+
+            .detail span,
+            .value {
+                font-size: 12px;
+            }
+
+            .status-button {
+                font-size: 10px;
+                padding: 3px 6px;
+            }
         }
     </style>
 </head>
